@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "working_times",
+  "info": {
+    "name": "WorkingTime",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Date": {
+      "type": "date"
+    },
+    "Day": {
+      "type": "enumeration",
+      "enum": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "Timings": {
+      "type": "component",
+      "repeatable": true,
+      "component": "timings.descrptive-timing"
+    },
+    "user": {
+      "via": "working_times",
+      "model": "users"
+    }
+  }
+}

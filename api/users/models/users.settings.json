@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users",
+  "info": {
+    "name": "Users",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FulllName": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Password": {
+      "type": "password"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "working_times": {
+      "via": "user",
+      "collection": "working-time"
+    }
+  }
+}
