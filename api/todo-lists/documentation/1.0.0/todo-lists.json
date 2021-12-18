@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/users": {
+    "/todo-lists": {
       "get": {
         "deprecated": false,
-        "description": "Find all the users's records",
+        "description": "Find all the todo-lists's records",
         "responses": {
           "200": {
-            "description": "Retrieve users document(s)",
+            "description": "Retrieve todo-lists document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Users"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Users"
+          "Todo-lists"
         ],
         "parameters": [
           {
@@ -194,79 +195,16 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new users record",
+        "description": "Create a new todo-lists record",
         "responses": {
           "200": {
-            "description": "Retrieve users document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Users"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Users"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewUsers"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/users/count": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve the number of users documents",
-        "responses": {
-          "200": {
-            "description": "Retrieve users document(s)",
+            "description": "Retrieve todo-lists document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,22 +244,36 @@
         },
         "summary": "",
         "tags": [
-          "Users"
+          "Todo-lists"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewTodo-lists"
+              }
+            }
+          }
+        }
       }
     },
-    "/users/{id}": {
+    "/todo-lists/count": {
       "get": {
         "deprecated": false,
-        "description": "Find one users record",
+        "description": "Retrieve the number of todo-lists documents",
         "responses": {
           "200": {
-            "description": "Retrieve users document(s)",
+            "description": "Retrieve todo-lists document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Users"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Users"
+          "Todo-lists"
+        ],
+        "parameters": []
+      }
+    },
+    "/todo-lists/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one todo-lists record",
+        "responses": {
+          "200": {
+            "description": "Retrieve todo-lists document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Todo-lists"
         ],
         "parameters": [
           {
@@ -376,14 +385,18 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single users record",
+        "description": "Update a single todo-lists record",
         "responses": {
           "200": {
-            "description": "Retrieve users document(s)",
+            "description": "Retrieve todo-lists document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Users"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Users"
+          "Todo-lists"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewUsers"
+                "$ref": "#/components/schemas/NewTodo-lists"
               }
             }
           }
@@ -449,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single users record",
+        "description": "Delete a single todo-lists record",
         "responses": {
           "200": {
-            "description": "deletes a single users based on the ID supplied",
+            "description": "deletes a single todo-lists based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Users"
+          "Todo-lists"
         ],
         "parameters": [
           {
@@ -514,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Users": {
+      "Todo-lists": {
         "required": [
           "id"
         ],
@@ -522,37 +535,63 @@
           "id": {
             "type": "string"
           },
-          "FullName": {
+          "Title": {
             "type": "string"
           },
-          "Email": {
+          "Description": {
             "type": "string"
           },
-          "Password": {
+          "Todo": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "TodoText": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "published_at": {
             "type": "string",
-            "format": "password"
-          },
-          "isActive": {
-            "type": "boolean",
-            "default": true
+            "format": "date-time"
           }
         }
       },
-      "NewUsers": {
+      "NewTodo-lists": {
         "properties": {
-          "FullName": {
+          "Title": {
             "type": "string"
           },
-          "Email": {
+          "Description": {
             "type": "string"
           },
-          "Password": {
+          "Todo": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "TodoText": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "published_at": {
             "type": "string",
-            "format": "password"
-          },
-          "isActive": {
-            "type": "boolean",
-            "default": true
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -564,9 +603,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Users"
-    }
-  ]
+  "tags": []
 }

@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "FulllName": {
+    "FullName": {
       "type": "string"
     },
     "Email": {
@@ -24,10 +24,6 @@
     "isActive": {
       "type": "boolean",
       "default": true
-    },
-    "working_times": {
-      "via": "user",
-      "collection": "working-time"
     }
   }
 }

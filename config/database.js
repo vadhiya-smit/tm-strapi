@@ -7,7 +7,7 @@ module.exports = ({ env }) => ({
         host: env('DATABASE_HOST', 'strapi.wkuqz.mongodb.net'),
         srv: env.bool('DATABASE_SRV', true),
         port: env.int('DATABASE_PORT', 27017),
-        database: env('DATABASE_NAME', 'strapi-app'),
+        database: env('DATABASE_NAME', 'strapi'),
         username: env('DATABASE_USERNAME', 'root'),
         password: env('DATABASE_PASSWORD', 'root'),
       },

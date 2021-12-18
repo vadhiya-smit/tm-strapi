@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_todo_lists_todos",
+  "info": {
+    "name": "Todo",
+    "icon": "book-open"
+  },
+  "options": {},
+  "attributes": {
+    "TodoText": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "todo_lists",
+  "info": {
+    "name": "TodoLists",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Todo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "todo-lists.todo"
+    }
+  }
+}

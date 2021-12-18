@@ -33,7 +33,6 @@
       "component": "timings.descrptive-timing"
     },
     "user": {
-      "via": "working_times",
       "model": "users"
     }
   }

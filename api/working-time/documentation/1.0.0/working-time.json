@@ -562,16 +562,16 @@
                 "id": {
                   "type": "string"
                 },
-                "InTime": {
-                  "type": "string"
-                },
-                "OutTime": {
-                  "type": "string"
-                },
                 "WorkDescription": {
                   "type": "string"
                 },
                 "BreakDescription": {
+                  "type": "string"
+                },
+                "InTime": {
+                  "type": "string"
+                },
+                "OutTime": {
                   "type": "string"
                 }
               }
@@ -585,7 +585,7 @@
               "id": {
                 "type": "string"
               },
-              "FulllName": {
+              "FullName": {
                 "type": "string"
               },
               "Email": {
@@ -596,12 +596,6 @@
               },
               "isActive": {
                 "type": "boolean"
-              },
-              "working_times": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               },
               "created_by": {
                 "type": "string"
@@ -642,16 +636,16 @@
                 "id": {
                   "type": "string"
                 },
-                "InTime": {
-                  "type": "string"
-                },
-                "OutTime": {
-                  "type": "string"
-                },
                 "WorkDescription": {
                   "type": "string"
                 },
                 "BreakDescription": {
+                  "type": "string"
+                },
+                "InTime": {
+                  "type": "string"
+                },
+                "OutTime": {
                   "type": "string"
                 }
               }
